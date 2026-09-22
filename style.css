@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: red;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2937;
+  background-color: #f9faf7;
+}
+
+header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 8%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2f6b3b;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #e58b35;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #374151;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #2f6b3b;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-btn {
+  text-decoration: none;
+  color: #2f6b3b;
+  font-weight: bold;
+}
+
+.signup-btn {
+  background-color: #2f6b3b;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 8%;
+  gap: 50px;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero-tag {
+  color: #2f6b3b;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #2f6b3b;
+}
+
+.hero-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn {
+  background-color: #2f6b3b;
+  color: white;
+  padding: 15px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.secondary-btn {
+  border: 2px solid #2f6b3b;
+  color: #2f6b3b;
+  padding: 13px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.image-placeholder {
+  width: 400px;
+  height: 400px;
+  background-color: #dfead9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150px;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .signup-btn {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 8%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .image-placeholder {
+    width: 280px;
+    height: 280px;
+    font-size: 100px;
+  }
+}

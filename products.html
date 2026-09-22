@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | Farm2Door</title>
+
+    <link rel="stylesheet" href="productstyle.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#" class="logo">
+                Farm<span>2</span>Door
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#" class="active">Products</a>
+                <a href="#">Farmers</a>
+                <a href="#">How It Works</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#" class="login-btn">Log In</a>
+
+                <a href="#" class="join-btn">
+                    Join Farm2Door
+                </a>
+
+                <!-- Cart -->
+                <button class="cart-btn" id="cartButton">
+                    🛒
+                    <span id="cartCount">0</span>
+                </button>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- Page Header -->
+
+        <section class="products-header">
+
+            <div class="header-content">
+
+                <p class="eyebrow">
+                    🌱 FRESH • LOCAL • DIRECT
+                </p>
+
+                <h1>
+                    Fresh products from
+                    <span>local farmers.</span>
+                </h1>
+
+                <p class="header-description">
+                    Discover fresh produce, dairy, poultry, honey and more
+                    directly from farmers in your community.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SEARCH / FILTER ================= -->
+
+        <section class="product-controls">
+
+            <div class="search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+
+            </div>
+
+
+            <div class="category-filter">
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="Vegetables">
+                        Vegetables
+                    </option>
+
+                    <option value="Fruits">
+                        Fruits
+                    </option>
+
+                    <option value="Eggs & Dairy">
+                        Eggs & Dairy
+                    </option>
+
+                    <option value="Meat">
+                        Meat
+                    </option>
+
+                    <option value="Pantry">
+                        Pantry
+                    </option>
+
+                    <option value="Herbs">
+                        Herbs
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORY BUTTONS ================= -->
+
+        <section class="categories">
+
+            <button class="category-btn active" data-category="all">
+                All Products
+            </button>
+
+            <button class="category-btn" data-category="Vegetables">
+                🥬 Vegetables
+            </button>
+
+            <button class="category-btn" data-category="Fruits">
+                🍎 Fruits
+            </button>
+
+            <button class="category-btn" data-category="Eggs & Dairy">
+                🥚 Eggs & Dairy
+            </button>
+
+            <button class="category-btn" data-category="Meat">
+                🍗 Meat
+            </button>
+
+            <button class="category-btn" data-category="Pantry">
+                🍯 Pantry
+            </button>
+
+            <button class="category-btn" data-category="Herbs">
+                🌿 Herbs
+            </button>
+
+        </section>
+
+
+        <!-- ================= PRODUCTS ================= -->
+
+        <section class="products-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">
+                        FARM FRESH
+                    </p>
+
+                    <h2>
+                        Available Products
+                    </h2>
+                </div>
+
+                <span id="productCount">
+                    0 products
+                </span>
+
+            </div>
+
+
+            <!-- JavaScript will insert cards here -->
+
+            <div
+                class="products-grid"
+                id="productsGrid">
+            </div>
+
+
+            <!-- No products message -->
+
+            <div
+                class="no-products"
+                id="noProducts"
+                style="display: none;"
+            >
+
+                <div class="no-products-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    No products found
+                </h3>
+
+                <p>
+                    Try changing your search or category filter.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= CART SIDEBAR ================= -->
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+
+        <div class="cart-header">
+
+            <div>
+                <p class="section-label">
+                    YOUR ORDER
+                </p>
+
+                <h2>
+                    Shopping Cart
+                </h2>
+            </div>
+
+            <button
+                class="close-cart"
+                id="closeCart">
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            class="cart-items"
+            id="cartItems">
+
+            <!-- Cart items inserted by JS -->
+
+        </div>
+
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>
+                    Total
+                </span>
+
+                <strong id="cartTotal">
+                    R0.00
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-btn"
+                id="checkoutButton">
+
+                Proceed to Checkout
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
